@@ -1,4 +1,4 @@
-POST http://localhost:3001/api/notes 
+POST http://localhost:3001/api/crearUsuarioEstudiante 
 Content-Type: application/json
 
-{"nombre": "TIANA","contrasena": "1234"}
+{"nombre": "ana","celular":3159273187,"institucion":"salesiano","apellido": "beltran","correo": "anasobeltran@gmail.com","correoAcudiente":"lmrmillan@hotmail.com","contrasena": "1234","targetaId": 1004716847}

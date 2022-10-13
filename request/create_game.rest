@@ -1,0 +1,4 @@
+POST http://localhost:3001/api/crearJuego
+Content-Type: application/json
+
+{"nombre": "ana","numPreguntas":3,"preguntas":[{"numPregunta":1,"pregunta":"cual es...","respuesta":1,"posiblesRespuestas":["es ...","tal vez...","podria ser..."]}]}

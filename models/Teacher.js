@@ -1,20 +1,17 @@
 const mongoose = require('mongoose');
 
-const userEstudent = new mongoose.Schema({
+const userTeacher = new mongoose.Schema({
     tipo: String,
     nombre: String,
     celular: Number,
     institucion: String,
     apellido: String,
     correo: String,
-    correoAcudiente: String,
+    cargo: String,
     contrasena: String,
-    targetaId: Number
-})
+    cedula: Number
+});
 
+const Teacher = mongoose.model('Teacher', userTeacher);
 
-
-const User = mongoose.model('User', userEstudent);
-
-
-module.exports = User;
+module.exports = Teacher;

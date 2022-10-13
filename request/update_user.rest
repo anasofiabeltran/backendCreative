@@ -1,0 +1,4 @@
+GET http://localhost:3001/api/actualizarEstudiante/6346faa160989428342549c4
+Content-Type: application/json
+
+{"nombre": "sara"}

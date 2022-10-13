@@ -1,0 +1,4 @@
+GET http://localhost:3001/api/cambiarJuego
+Content-Type: application/json
+
+{"nombreUsuario":"sara","nuevoNombre": "camila"}
