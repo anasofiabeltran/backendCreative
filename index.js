@@ -2,58 +2,21 @@ require('./mongo');
 
 const express = require('express');
 const cors = require('cors');
-const User = require('./models/User');
-const Teacher = require('./models/Teacher');
-const Game = require('./models/game');
+const routerApi = require('./split/routes');
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 
-/*
-let users = [
-    {
-        "id":1,
-        "tipo":"estudiante",
-        "usuario":"ana",
-        "constrasena":"1234",
-    },
-    {
-        "id":2,
-        "tipo":"estudiante",
-        "usuario":"dani",
-        "constrasena":"1234",
-    },
-    {
-        "id":3,
-        "tipo":"estudiante",
-        "usuario":"carmen",
-        "constrasena":"1234",
-    },
-] 
 
-*/
 
 let users = [] 
 
-
-app.get('/',(request,response) => {
-    response.send('<h1>hello world </h1>');
-});
-
 /*------------- estudiantes ------------------------------------------- */
 
-app.get('/api/estudiantes',(request,response) => {
-    User.find({})
-    .then(result =>{
-        response.json(result);
-    })
-    .catch(err =>{
-        console.error(err);
-    })
-    
-});
+routerApi(app);
+/*
 
 app.get('/api/notes/:id',(request,response) => {
     const {id} = request.params;
@@ -69,17 +32,6 @@ app.get('/api/notes/:id',(request,response) => {
 app.post('/api/crearUsuarioEstudiante' , (request, response) =>{
     const user = request.body;
 
-    /*
-    const newUser = {
-        id: ids+1,
-        tipo:"estudiante",
-        usuario:user.nombre,
-        contrasena:user.contrasena,
-    }
-    */
-    //users = [...users, newUser];
-
-    
     const newUserBD = new User({
         tipo: 'estudiante',
         nombre:user.nombre,
@@ -119,8 +71,12 @@ app.get('/api/actualizarEstudiante/:id',(request,response) => {
     
 });
 
+*/
+
 /*------------- estudiantes ------------------------------------------- */
 /*------------- profesores ------------------------------------------- */
+
+/*
 app.get('/api/profesores',(request,response) => {
     Teacher.find({})
     .then(result =>{
@@ -134,17 +90,6 @@ app.get('/api/profesores',(request,response) => {
 
 app.post('/api/crearUsuarioDocente' , (request, response) =>{
     const teacher = request.body;
-
-    /*
-    const newUser = {
-        id: ids+1,
-        tipo:"estudiante",
-        usuario:user.nombre,
-        contrasena:user.contrasena,
-    }
-    */
-    //users = [...users, newUser];
-
     
     const newUserBD = new Teacher({
         tipo: 'profesor',
@@ -169,8 +114,12 @@ app.post('/api/crearUsuarioDocente' , (request, response) =>{
     })
 
 });
+
+*/
 /*------------- profesores ------------------------------------------- */
 /*-------------------juego--------------------------------------- */
+
+/*
 
 app.get('/api/juegos/:nombreUsuario',(request,response) => {
     const nombreUsuario = request.params;
@@ -227,6 +176,8 @@ app.post('/api/crearJuego' , (request, response) =>{
 
 });
 
+
+*/
 /*-------------------juego--------------------------------------- */
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () =>{

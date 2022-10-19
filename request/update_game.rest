@@ -1,4 +1,4 @@
-GET http://localhost:3001/api/cambiarJuego
+PUT http://localhost:3001/api/cambiarJuego/crearPregunta
 Content-Type: application/json
 
-{"nombreUsuario":"sara","nuevoNombre": "camila"}
+{"nameGame":"nuevo juego 1","question": {"numPregunta":4,"pregunta":"cuarta pregunta","respuesta":1,"posiblesRespuestas":["es ...","tal vez...","podria ser..."]}}

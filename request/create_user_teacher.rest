@@ -1,4 +1,4 @@
-POST http://localhost:3001/api/crearUsuarioDocente 
+POST http://localhost:3001/api/registrarProfesor 
 Content-Type: application/json
 
 {"nombre": "ana","celular":3159273187,"institucion":"salesiano","apellido": "beltran","correo": "anasobeltran@gmail.com","cargo":"docente","contrasena": "1234","cedula":1004716847}

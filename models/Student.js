@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const userEstudent = new mongoose.Schema({
+const userStudent = new mongoose.Schema({
     tipo: String,
     nombre: String,
     celular: Number,
@@ -14,7 +14,7 @@ const userEstudent = new mongoose.Schema({
 
 
 
-const User = mongoose.model('User', userEstudent);
+const Student = mongoose.model('Student', userStudent);
 
 
-module.exports = User;
+module.exports = Student;
