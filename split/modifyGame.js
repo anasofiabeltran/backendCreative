@@ -2,9 +2,9 @@ const router = require('express').Router();
 const Game = require('../models/game');
 
 //crear juego
-router.put('/crearPregunta',(request,response) => {
-
-    const {nameGame,question} = request.body;
+router.put('/crearPregunta/:nameGame',(request,response) => {
+    const {nameGame} = request.params;
+    const {question} = request.body;
     Game.updateOne(
     {
         "nombre": nameGame

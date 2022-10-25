@@ -1,4 +1,4 @@
-PUT http://localhost:3001/api/cambiarJuego/crearPregunta
+PUT http://localhost:3001/api/cambiarJuego/crearPregunta/ana
 Content-Type: application/json
 
-{"nameGame":"nuevo juego 1","question": {"numPregunta":4,"pregunta":"cuarta pregunta","respuesta":1,"posiblesRespuestas":["es ...","tal vez...","podria ser..."]}}
+{"question": {"numPregunta":1,"pregunta":"primera pregunta","respuesta":1,"posiblesRespuestas":["es ...","tal vez...","podria ser..."]}}
