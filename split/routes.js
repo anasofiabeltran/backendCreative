@@ -8,6 +8,7 @@ const modifyGame = require('./modifyGame');
 const baseRouter = require('./baseRoute');
 const obtainGame = require('./obtainGame');
 const searchEstudent = require('./searchEstudent');
+const searchGames = require('./games');
 
 function routerApi(app){
     app.use("/api", router);
@@ -19,6 +20,7 @@ function routerApi(app){
     router.use('/cambiarJuego',modifyGame);
     router.use('/consultarDatosJuego',obtainGame);
     router.use('/consultarDatosEstudiante',searchEstudent);
+    router.use('/juegos',searchGames);
     router.use('/', baseRouter);
 }
 
