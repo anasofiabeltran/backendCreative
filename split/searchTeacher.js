@@ -1,10 +1,10 @@
 const router = require('express').Router();
-const Student = require('../models/Student');
+const Teacher = require('../models/Teacher');
 
 //obtener estudiantes
 router.get( '/:id/:contrasena' ,(request,response) => {
     const usuario = request.params;
-    Student.findOne({"targetaId": parseInt(usuario.id)})
+    Teacher.findOne({"cedula": parseInt(usuario.id)})
     .then(result =>{
         response.json(result.contrasena==usuario.contrasena);
     })

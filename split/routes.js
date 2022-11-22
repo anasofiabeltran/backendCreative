@@ -8,7 +8,9 @@ const modifyGame = require('./modifyGame');
 const baseRouter = require('./baseRoute');
 const obtainGame = require('./obtainGame');
 const searchEstudent = require('./searchEstudent');
+const searchTeacher = require('./searchTeacher');
 const searchGames = require('./games');
+const qualify = require('./qualify');
 
 function routerApi(app){
     app.use("/api", router);
@@ -20,7 +22,9 @@ function routerApi(app){
     router.use('/cambiarJuego',modifyGame);
     router.use('/consultarDatosJuego',obtainGame);
     router.use('/consultarDatosEstudiante',searchEstudent);
+    router.use('/loginDocente',searchTeacher);
     router.use('/juegos',searchGames);
+    router.use('/calificar',qualify);
     router.use('/', baseRouter);
 }
 

@@ -1,1 +1,1 @@
-GET http://localhost:3001/api/consultarDatosEstudiante/123
+GET http://localhost:3001/api/consultarDatosEstudiante/1004716847/1234

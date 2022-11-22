@@ -1,0 +1,4 @@
+POST http://localhost:3001/api/calificar
+Content-Type: application/json
+
+{"grade": 5,"creator":"ana","responder":"daniel","test": "matematicas"}
