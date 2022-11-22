@@ -8,6 +8,7 @@ router.post('/' , (request, response) =>{
     const newgameBD = new Game({
 
         nombre: game.nombre,
+        creator: game.creator,
         cantidadPreguntas: game.numPreguntas,
         preguntas: game.preguntas
         

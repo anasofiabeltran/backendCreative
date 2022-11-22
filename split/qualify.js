@@ -6,8 +6,8 @@ router.post('/' , (request, response) =>{
     const gradeDetails = request.body;
     const newGrade = new Grade({
         grade: gradeDetails.grade,
-        creator: gradeDetails.teacher,
-        responder: gradeDetails.student,
+        creator: gradeDetails.creator,
+        responder: gradeDetails.responder,
         test: gradeDetails.test
     })
 

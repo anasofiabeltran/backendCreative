@@ -2,8 +2,8 @@ const mongoose = require('mongoose');
 
 const examGrade = new mongoose.Schema({
     grade: Number,
-    teacher: String,
-    student: String,
+    creator: String,
+    responder: String,
     test: String
 })
 
