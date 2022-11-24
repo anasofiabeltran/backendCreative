@@ -11,6 +11,7 @@ const searchEstudent = require('./searchEstudent');
 const searchTeacher = require('./searchTeacher');
 const searchGames = require('./games');
 const qualify = require('./qualify');
+const obtainGrades = require('./obtainGrade');
 
 function routerApi(app){
     app.use("/api", router);
@@ -25,6 +26,7 @@ function routerApi(app){
     router.use('/loginDocente',searchTeacher);
     router.use('/juegos',searchGames);
     router.use('/calificar',qualify);
+    router.use('/consultarCalificaciones',obtainGrades);
     router.use('/', baseRouter);
 }
 
